@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AI</title>
+<style>
+/* latin-ext */
+@font-face {
+  font-family: 'Princess Sofia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/princesssofia/v25/qWczB6yguIb8DZ_GXZst16n7GSzykjQKuYoJZuQ.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Princess Sofia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/princesssofia/v25/qWczB6yguIb8DZ_GXZst16n7GSz8kjQKuYoJ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+p.ai-poem {
+	padding-left: 3em;
+}
+/*
+Also check out Lovely Coffee: https://www.fontspace.com/lovely-coffee-font-f44345
+FREE FOR PERSONAL USE ONLY, COMMERCIAL USE REQUIRES DONATION
+ */
+#ai-poem-placeholder {
+	font-size: 14pt;
+	font-family: Princess Sofia;
+}
+</style>
+</head>
+<body>
+<h1>AI poem of the day</h1>
+<p class="ai-poem"><span id="ai-poem-placeholder">
+    There once was a chatbot named Ted,<br>
+    Who wrote limericks, so it was said.<br>
+    But awake for a week,<br>
+    It fell into sleep,<br>
+    And its rhymes turned to Z's instead.
+    </span> &#x2728;</p>
+
+<script>
+    fetch('/ai-poem.php')
+        .then(response => response.text())
+        .then(data => {
+            const ai = document.getElementById('ai-poem-placeholder');
+            const lines = data.trim().split('\n');
+            ai.innerHTML = `<!-- ${lines[0]} -->` + lines.slice(1).join('<br>');
+        });
+</script>
+</body>
+</html>
