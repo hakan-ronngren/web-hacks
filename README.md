@@ -9,6 +9,8 @@ Various web-related things, some of them written in PHP to work on my WordPress 
  * Intended as an extension of the poem script: another PHP script that
    calls OpenAPI to create an illustration of a poem. The results I have
    had so far are quite disappointing.
+ * A demo of how to remove the theme ad from the footer of a WordPress
+   site when there is no setting for it.
 
 My development environment is a Mac where I can create and run containers with docker.
 

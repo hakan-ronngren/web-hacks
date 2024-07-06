@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>How to kill the Neve ad</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #container {
+        width: 800px;
+        padding-left: 25px;
+    }
+    #footer {
+        font-size: 12pt;
+        border-color: gray;
+        border-style: solid;
+        border-width: 1px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+
+<h1>How to kill the Neve ad</h1>
+
+<p>It is not a secret that I am a proud user of the Themeisle Neve theme.
+    I appreciate the Neve theme developers for their hard work and for
+    providing the theme for free, but I need the space in my footer for
+    other things.</p>
+<p>This page has a simple JavaScript snippet that removes the Neve ad.
+    You can still see it if you view the page source, but if you use
+    your browser's inspect function, the entire ad is gone.
+    It is not hidden, but cleanly removed from the browser's model
+    of the page.</p>
+<p>It relies on finding an anchor element with a certain href in it,
+    and then removing its parent element. If they change their design,
+    <span style="color: darkred; text-decoration: underline;">this script might also need to change</span>.</p>
+<p>You don't have to put the script in the head element, which is good for me
+    because on my WordPress site I can't alter the head as easily as
+    I put content in the body.</p>
+</p>
+
+</div>
+
+<script>
+console.log('Script section is running');
+// When the page is fully rendered, find the anchor element that has a href attribute containing "neve" and remove its parent element
+document.addEventListener('DOMContentLoaded', function() {
+    var neveAd = document.querySelector('a[href="https://themeisle.com/themes/neve/"]');
+    if (neveAd) {
+        neveAd.parentElement.remove();
+    }
+});
+</script>
+
+<div id="footer">
+<p>This is the footer. There should not be an ad here &#128071; anymore.</p>
+<p><a href="https://themeisle.com/themes/neve/" rel="nofollow">Neve</a> | Powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a></p>
+</div>
+
+</body>
+</html>
