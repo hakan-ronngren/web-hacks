@@ -11,6 +11,7 @@ Various web-related things, some of them written in PHP to work on my WordPress 
    had so far are quite disappointing.
  * A demo of how to remove the theme ad from the footer of a WordPress
    site when there is no setting for it.
+ * A page with some nice fonts
 
 My development environment is a Mac where I can create and run containers with docker.
 
