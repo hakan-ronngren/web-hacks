@@ -3,9 +3,9 @@
     <head>
         <title>Font Demo</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');  /* Lite krafsig */
-            @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');  /* Väldigt kursiv och sirlig */
-            @import url('https://fonts.googleapis.com/css2?family=Princess Sofia&display=swap');  /* Söt och rolig */
+            @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Princess Sofia&display=swap');
             body {
                 font-family: Arial, sans-serif;
             }
@@ -21,26 +21,44 @@
             .princess-sofia {
                 font-family: Princess Sofia;
             }
+            #container {
+                width: 800px;
+                margin: 0 auto;
+            }
         </style>
+        <script>
+            // Repeat a sample sentence for each font
+            document.addEventListener('DOMContentLoaded', function() {
+                const text = "A Big Cat Defeated Equijoined Foxes, Gracious Horses, " +
+                "Icy Jackals; Kangaroos Left Mom Nearby Over Prairie Quicksand, " +
+                "Ripped Swiftly Toward Unseen Valleys While Xenon Yachts Zigzagged.";
+
+                const fonts = ['Allura', 'Great Vibes', 'Princess Sofia'];
+
+                const container = document.getElementById('container');
+
+                fonts.forEach(function(font) {
+                    var elem = document.createElement('h2');
+                    elem.textContent = font;
+                    container.appendChild(elem);
+
+                    elem = document.createElement('p');
+                    elem.textContent = text;
+                    elem.classList.add('font-demo');
+                    elem.classList.add(font.toLowerCase().replace(' ', '-'));
+                    container.appendChild(elem);
+                });
+            });
+        </script>
     </head>
     <body>
-        <div style="width: 1000px; padding-left: 25px;">
+        <div id="container">
             <h1>Font Demo</h1>
 
-            <p>This is a demo of some nice fonts. It imports the fonts from the
-                Google Fonts API and uses them in the paragraphs below.
-                The imports are in the CSS, not in link elements in the head.
-                You can do the same on a WordPress site by putting the imports
-                in a custom CSS.</p>
-
-            <h2>Allura</h2>
-            <p class="font-demo allura">The quick brown fox jumps over the lazy dog.</p>
-
-            <h2>Great Vibes</h2>
-            <p class="font-demo great-vibes">The quick brown fox jumps over the lazy dog.</p>
-
-            <h2>Princess Sofia</h2>
-            <p class="font-demo princess-sofia">The quick brown fox jumps over the lazy dog.</p>
+            <p>This is a demo of some nice fonts. You will find every capital
+                and small letter in the sample sentence. Fonts are imported in
+                the CSS, not in link elements in the head. This method is
+                applicable to every WordPress theme that allows custom CSS.</p>
 
         </div>
     </body>
