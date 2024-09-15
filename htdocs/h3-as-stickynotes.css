@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Roboto+Condensed:wght@400&display=swap');
+
+h3.stickynote {
+    background-color: #F8F8C0;
+    padding: 15px;
+    border-radius: 0px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    margin: 30px auto 20px auto; /* Center horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Caveat', cursive; /* Hand-written font */
+    font-size: 2.0em;
+}
+
+/* TRAITS LIST */
+
+ul.traits {
+    font-family: 'Arial', sans-serif; /* Default font */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 10px auto 20px auto;
+    max-width: 100%;
+    justify-content: center; /* Center the items within the ul */
+    display: flex; /* Use flexbox to align items in a row */
+    gap: 8px; /* Add white space between items */
+}
+
+ul.traits li {
+    width: 115px; /* Fixed width */
+    padding: 11px 0 9px 0; /* Top, Right, Bottom, Left */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left; /* Left-align text */
+    border-radius: 5px; /* Round corners */
+    position: relative; /* For positioning the pseudo-element */
+    display: flex; /* Use flexbox for vertical alignment */
+    align-items: center; /* Vertically center the content */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    font-weight: normal;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 40px; /* Set a consistent height */
+}
+
+/* SKILL LEVEL: LOW */
+
+ul.traits li.skill-0 {
+    background-color: #d0ffc0;
+    color: #046307;
+}
+
+ul.traits li.skill-0::before {
+    content: "\1F331"; /* Seedling emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.skill-0::after {
+    content: "Easy";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+/* SKILL LEVEL: MEDIUM */
+
+ul.traits li.skill-1 {
+    background-color: #b0ffa0;
+    color: #046307;
+}
+
+ul.traits li.skill-1::before {
+    content: "\1F4D8"; /* Blue book emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.skill-1::after {
+    content: "Medium";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+/* SKILL LEVEL: HIGH */
+
+ul.traits li.skill-2 {
+    background-color: #83e96f;
+    color: #035106;
+}
+
+ul.traits li.skill-2::before {
+    content: "\1F393"; /* Student emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.skill-2::after {
+    content: "Expert";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+
+/* FLEXIBILITY LEVEL: LOW */
+
+ul.traits li.flex-0 {
+    background-color: #ffdddd;
+    color: #a00000;
+}
+
+ul.traits li.flex-0::before {
+    content: "\1F558"; /* Nine-o-clock emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.flex-0::after {
+    content: "Clocked";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+/* FLEXIBILITY LEVEL: MEDIUM */
+
+ul.traits li.flex-1 {
+    background-color: #e0e0ff;
+    color: #003388;
+}
+
+ul.traits li.flex-1::before {
+    content: "\1F4C6"; /* Calendar emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.flex-1::after {
+    content: "Flexible";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+/* FLEXIBILITY LEVEL: HIGH */
+
+ul.traits li.flex-2 {
+    background-color: #83e96f;
+    color: #035106;
+}
+
+ul.traits li.flex-2::before {
+    content: "\1F3DD"; /* Desert Island emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.flex-2::after {
+    content: "Free";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+/* SCALABILITY LEVEL: LOW */
+
+ul.traits li.scale-0 {
+    background-color: #ffdddd;
+    color: #a00000;
+}
+
+ul.traits li.scale-0::before {
+    content: "\1f4b5"; /* Dollar Banknote emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.scale-0::after {
+    content: "Priced";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+/* SCALABILITY LEVEL: MEDIUM */
+
+ul.traits li.scale-1 {
+    background-color: #e0e0ff;
+    color: #003388;
+}
+
+ul.traits li.scale-1::before {
+    content: "\1F4B0"; /* Money Bag emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.scale-1::after {
+    content: "Value";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+/* SCALABILITY LEVEL: HIGH */
+
+ul.traits li.scale-2 {
+    background-color: #83e96f;
+    color: #035106;
+}
+
+ul.traits li.scale-2::before {
+    content: "\1F680"; /* Rocket emoji */
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+ul.traits li.scale-2::after {
+    content: "Infinity";
+    position: absolute;
+    left: 45px;
+    font-size: 1em;
+}
+
+/* Back to top link styles */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffffcc;
+    border: 1px solid #e76a47;
+    color: #e76a47;
+    padding: 10px 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    z-index: 1000; /* Ensure it is above other elements */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    /* Hide the link by default */
+    visibility: hidden;
+    opacity: 0;
+}
+
+#back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+}
